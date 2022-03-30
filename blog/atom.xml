@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://your-docusaurus-test-site.com/blog</id>
+    <id>https://brimdata.github.io/zed-docs-site/blog</id>
     <title>Zed Blog</title>
     <updated>2022-03-17T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://your-docusaurus-test-site.com/blog"/>
+    <link rel="alternate" href="https://brimdata.github.io/zed-docs-site/blog"/>
     <subtitle>Zed Blog</subtitle>
-    <icon>https://your-docusaurus-test-site.com/img/favicon.ico</icon>
+    <icon>https://brimdata.github.io/zed-docs-site/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[JQ vs ZQ]]></title>
         <id>/2022/03/17/zq-vs-jq</id>
-        <link href="https://your-docusaurus-test-site.com/blog/2022/03/17/zq-vs-jq"/>
+        <link href="https://brimdata.github.io/zed-docs-site/blog/2022/03/17/zq-vs-jq"/>
         <updated>2022-03-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[This blog is a list of one-liners for common data wrangling tasks written in jq, then in zq.]]></summary>
         <content type="html"><![CDATA[<p>This blog is a list of one-liners for common data wrangling tasks written in jq, then in zq.</p>]]></content>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkzed_docs=self.webpackChunkzed_docs||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"JQ vs ZQ","permalink":"/zed-docs-site/blog/2022/03/17/zq-vs-jq"}]}')}}]);
