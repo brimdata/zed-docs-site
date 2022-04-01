@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "brimdata", // Usually your GitHub org/user name.
-  projectName: "zed-docs-site", // Usually your repo name.
+  projectName: "zed", // Usually your repo name.
   trailingSlash: true,
 
   presets: [
