@@ -13,8 +13,9 @@ const config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "Brim Data", // Usually your GitHub org/user name.
-  projectName: "Zed", // Usually your repo name.
+  organizationName: "brimdata", // Usually your GitHub org/user name.
+  projectName: "zed-docs-site", // Usually your repo name.
+  trailingSlash: true,
 
   presets: [
     [
