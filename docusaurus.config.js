@@ -17,6 +17,18 @@ const config = {
   projectName: "zed", // Usually your repo name.
   trailingSlash: true,
 
+  plugins: [
+    // This plugin allows, e.g, docs/ to be a symlink to ../zed/docs/.
+    function (context, options) {
+      return {
+        name: 'allow-symlinks-plugin',
+        configureWebpack(config, isServer, utils) {
+          return { resolve: { symlinks: false } }
+        }
+      };
+    },
+  ],
+
   presets: [
     [
       "classic",
