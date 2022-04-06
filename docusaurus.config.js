@@ -38,6 +38,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/brimdata/zed/tree/main",
+          exclude: ['**/ztests/**'],
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
