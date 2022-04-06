@@ -7,12 +7,13 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Zed",
-  tagline: "Working with data has never been easier.",
+  tagline: "Data has never been easier.",
   url: "https://zed.brimdata.io",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
+  stylesheets: ["https://use.typekit.net/nll6rzm.css"],
   organizationName: "brimdata", // Usually your GitHub org/user name.
   projectName: "zed", // Usually your repo name.
   trailingSlash: true,
@@ -21,14 +22,13 @@ const config = {
     // This plugin allows, e.g, docs/ to be a symlink to ../zed/docs/.
     function (context, options) {
       return {
-        name: 'allow-symlinks-plugin',
+        name: "allow-symlinks-plugin",
         configureWebpack(config, isServer, utils) {
-          return { resolve: { symlinks: false } }
-        }
+          return { resolve: { symlinks: false } };
+        },
       };
     },
   ],
-
   presets: [
     [
       "classic",
@@ -36,11 +36,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/brimdata/zed-docs/tree/main",
-        },
-        blog: {
-          showReadingTime: true,
           // Please change this to your repo.
           editUrl: "https://github.com/brimdata/zed-docs/tree/main",
         },
@@ -67,7 +62,6 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/brimdata",
             label: "GitHub",
