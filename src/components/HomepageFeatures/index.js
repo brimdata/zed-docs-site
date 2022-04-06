@@ -4,39 +4,40 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Effortless Data Discovery",
-
-    description: (
-      <>Quickly see the types in your data and get a sample of each.</>
-    ),
-  },
-  {
-    title: "Incredible Tooling",
-
+    title: "Super-structured Data",
     description: (
       <>
-        Scale down to your desktop with tools like <code>zq</code>, then scale
-        up to the cloud with our <code>zed lake</code>.
+        Zed is a new data model that unifies the JSON and relational models to
+        make data as easy as ever.
       </>
     ),
   },
   {
-    title: "Super Structured Data",
+    title: "Command-line Tooling",
+    description: (
+      <>
+        Run lightning fast search and analytics queries from your command line
+        over local Zed data.
+      </>
+    ),
+  },
+  {
+    title: "Data Lake Scaling",
 
     description: (
       <>
-        Enjoy the benefits of super-structured data. No more rigid schemas. No
-        more JSON strings.
+        Run the zed command tools at cloud scale with Git-like transactional
+        commits to the Zed lake storage format.
       </>
     ),
   },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({ title, description }) {
   return (
-    <div className={clsx("col col--4")}>
+    <div className={clsx("col col--4", styles.feature)}>
       <div className="padding-horiz--md">
-        <h3>{title}</h3>
+        <h3 className={styles.featureHeader}>{title}</h3>
         <p>{description}</p>
       </div>
     </div>

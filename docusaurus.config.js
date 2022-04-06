@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Zed",
-  tagline: "Working with data has never been easier.",
+  tagline: "Data has never been easier.",
   url: "https://zed.brimdata.io",
   baseUrl: "/",
   onBrokenLinks: "warn",
@@ -15,7 +15,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "Brim Data", // Usually your GitHub org/user name.
   projectName: "Zed", // Usually your repo name.
-
+  stylesheets: ["https://use.typekit.net/nll6rzm.css"],
   presets: [
     [
       "classic",
@@ -49,7 +49,6 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/brimdata",
             label: "GitHub",
