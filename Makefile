@@ -11,3 +11,9 @@ fetch-latest:
 	@git clone --depth=1 -b main --single-branch https://github.com/brimdata/zed tmp
 	@mv tmp/docs docs
 	@rm -rf tmp
+
+.PHONY: dev
+dev:
+	@rm -rf docs
+	@ln -s ../zed/docs
+	@yarn start
