@@ -13,9 +13,22 @@ const config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "Brim Data", // Usually your GitHub org/user name.
-  projectName: "Zed", // Usually your repo name.
   stylesheets: ["https://use.typekit.net/nll6rzm.css"],
+  organizationName: "brimdata", // Usually your GitHub org/user name.
+  projectName: "zed", // Usually your repo name.
+  trailingSlash: true,
+
+  plugins: [
+    // This plugin allows, e.g, docs/ to be a symlink to ../zed/docs/.
+    function (context, options) {
+      return {
+        name: "allow-symlinks-plugin",
+        configureWebpack(config, isServer, utils) {
+          return { resolve: { symlinks: false } };
+        },
+      };
+    },
+  ],
   presets: [
     [
       "classic",
