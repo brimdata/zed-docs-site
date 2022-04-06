@@ -27,7 +27,16 @@
   --ifm-color-primary-lighter: #ff870f;
   --ifm-color-primary-lightest: #ff9832;
 
-  --ifm-font-size-base: 110%;  
+  --ifm-font-size-base: 110%;
+}
+
+@media screen and (max-width: 996px) {
+  :root {
+    --ifm-font-size-base: 100%;
+  }
+  .markdown h1:first-child {
+    --ifm-h1-font-size: 2.4rem
+  }
 }
 
 .docusaurus-highlight-code-line {
