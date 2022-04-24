@@ -38,7 +38,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/brimdata/zed/tree/main",
-          exclude: ['**/ztests/**'],
+          exclude: ["**/ztests/**"],
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -53,6 +53,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: "img/zed-social-image.png",
       navbar: {
         title: "Zed",
         logo: {
