@@ -54,6 +54,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/zed-social-image.png",
+      metadata: [{ name: "twitter:card", content: "summary" }],
       navbar: {
         title: "Zed",
         logo: {
