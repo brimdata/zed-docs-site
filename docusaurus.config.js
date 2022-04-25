@@ -108,8 +108,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
+                label: "Brim Data, Inc.",
+                href: "https://www.brimdata.io/",
               },
               {
                 label: "GitHub",
