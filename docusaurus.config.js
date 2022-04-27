@@ -109,7 +109,7 @@ const config = {
             items: [
               {
                 label: "Blog",
-                to: "/blog",
+                to: "https://www.brimdata.io/blog",
               },
               {
                 label: "GitHub",
