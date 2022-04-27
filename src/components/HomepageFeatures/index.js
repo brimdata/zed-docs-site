@@ -23,10 +23,9 @@ const FeatureList = [
   },
   {
     title: "Data Lake Scaling",
-
     description: (
       <>
-        Run the zed command tools at cloud scale with Git-like transactional
+        Run Zed command-line tools at cloud scale with Git-like transactional
         commits to the Zed lake storage format.
       </>
     ),
