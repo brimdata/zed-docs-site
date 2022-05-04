@@ -14,8 +14,8 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   stylesheets: ["https://use.typekit.net/nll6rzm.css"],
-  organizationName: "brimdata", // Usually your GitHub org/user name.
-  projectName: "zed", // Usually your repo name.
+  organizationName: "brimdata",
+  projectName: "zed",
   trailingSlash: true,
 
   plugins: [
@@ -36,7 +36,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
           editUrl: "https://github.com/brimdata/zed/tree/main",
           exclude: ["**/ztests/**"],
         },
