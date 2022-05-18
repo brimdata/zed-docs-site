@@ -18,7 +18,7 @@ function HomepageHeader() {
           </p>
           <div className={styles.buttons}>
             <Link className={styles.heroButton} to="/docs">
-              Get Started
+              Learn More
             </Link>
           </div>
         </div>
