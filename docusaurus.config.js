@@ -20,7 +20,7 @@ const config = {
 
   plugins: [
     // This plugin allows, e.g, docs/ to be a symlink to ../zed/docs/.
-    function (context, options) {
+    function(context, options) {
       return {
         name: "allow-symlinks-plugin",
         configureWebpack(config, isServer, utils) {
@@ -70,6 +70,10 @@ const config = {
             docId: "README",
             position: "left",
             label: "Docs",
+          },
+          {
+            type: "docsVersionDropdown",
+            position: "right",
           },
           {
             href: "https://github.com/brimdata",
