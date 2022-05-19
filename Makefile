@@ -12,8 +12,6 @@ fetch:
 build: fetch
 	@yarn install --frozen-lockfile
 	@yarn build
-
-
 .PHONY: version
 version: fetch
 	yarn run docusaurus docs:version $(REF)
