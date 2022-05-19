@@ -1,4 +1,4 @@
-REF = "main"
+REF = main
 
 .PHONY: fetch
 fetch:
