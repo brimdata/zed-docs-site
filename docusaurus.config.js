@@ -118,6 +118,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: "WZNIEWJ5O6",
+        apiKey: "5b2387711eca356fb0d654336ae3f740",
+        indexName: "zed-brimdata",
+      }
     }),
 };
 
