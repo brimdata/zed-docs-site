@@ -35,13 +35,7 @@ jobs:
           # You can swap them out with your own user credentials.
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com 
-      - name: Check New Version
-        uses: tj-actions/changed-files@23.1
-        id: check-new-version
-        with:
-          files: versions.json
       - name: Trigger Algolia Crawler
-        if: steps.check-new-version.any_changed == 'true'
         run: |
           curl -X POST -H "Content-Type: application/json" \
                --user "${{ secrets.ALGOLIA_CRAWLER_APP_ID }}:${{ secrets.ALGOLIA_CRAWLER_API_KEY }}" \
