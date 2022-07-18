@@ -2,16 +2,15 @@ REF = main
 
 .PHONY: fetch
 fetch:
-	@rm -rf docs tmp
-	@mkdir tmp
-	@git clone --depth=1 -b $(REF) --single-branch https://github.com/brimdata/zed tmp
-	@mv tmp/docs docs
-	@rm -rf tmp
+	@rm -rf docs
+	@curl -LSfs https://github.com/brimdata/zed/tarball/$(REF) | \
+		tar -xf - --include='*/docs' --strip-components=1
 
 .PHONY: build
 build: fetch
 	@yarn install --frozen-lockfile
 	@yarn build
+
 .PHONY: version
 version: fetch
 	yarn run docusaurus docs:version $(REF)
