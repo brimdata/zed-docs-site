@@ -4,7 +4,7 @@ REF = main
 fetch:
 	@rm -rf docs
 	@curl -LSfs https://github.com/brimdata/zed/tarball/$(REF) | \
-		tar -xf - --strip-components=1 '*/docs'
+		tar -xzf - --strip-components=1 '*/docs'
 
 .PHONY: build
 build: fetch
