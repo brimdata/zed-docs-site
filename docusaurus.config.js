@@ -36,13 +36,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: ({version, docPath}) => {
-            if (version === "current") {
-              return `https://github.com/brimdata/zed/edit/main/docs/${docPath}`;
-            } else {
-              return `https://github.com/brimdata/zed/tree/${version}/docs/${docPath}`;
-            }
-          },
+          editUrl: ({docPath}) =>
+            `https://github.com/brimdata/zed/edit/main/docs/${docPath}`,
           exclude: ["**/ztests/**"],
         },
         theme: {
