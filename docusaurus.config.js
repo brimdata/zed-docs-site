@@ -16,7 +16,7 @@ const config = {
   stylesheets: ["https://use.typekit.net/nll6rzm.css"],
   organizationName: "brimdata",
   projectName: "zed",
-  trailingSlash: true,
+  trailingSlash: false,
 
   plugins: [
     // This plugin allows, e.g, docs/ to be a symlink to ../zed/docs/.
