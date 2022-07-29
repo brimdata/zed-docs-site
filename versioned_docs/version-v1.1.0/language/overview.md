@@ -20,7 +20,7 @@ However, in Zed, the entities that transform data are called
 "operators" instead of "commands" and unlike Unix pipelines,
 the streams of data in a Zed query
 are typed data sequences that adhere to the
-[Zed data model](../formats/zed.md#the-zed-data-model-specification).
+[Zed data model](../formats/zed.md).
 Moreover, Zed sequences can be forked and joined:
 ```
 operator
@@ -156,7 +156,7 @@ The `search` and `where` operators "find" values in their input and drop
 the ones that do not match what is being looked for.
 
 The [yield operator](operators/yield.md#operator) emits one or more output values
-for each input value based on arbitrary [expressions](#expressions),
+for each input value based on arbitrary [expressions](#6-expressions),
 providing a convenient means to derive arbitrary output values as a function
 of each input value, much like the map concept in the MapReduce framework.
 
@@ -324,7 +324,7 @@ is abbreviated
 foo bar or x > 100
 ```
 Furthermore, if an operator-free expression is not valid syntax for
-a search expression but is a valid [Zed expression](#expressions),
+a search expression but is a valid [Zed expression](#6-expressions),
 then the abbreviation is treated as having an implied `yield` operator, e.g.,
 ```
 {s:lower(s)}
@@ -419,7 +419,7 @@ Named types may be created with the syntax
 ```
 type <id> = <type>
 ```
-where `<id>` is an identifier and `<type>` or a [Zed type](#first-class-types).
+where `<id>` is an identifier and `<type>` or a [Zed type](#51-first-class-types).
 This create a new type with the given name in the Zed type system, e.g.,
 ```mdtest-command
 echo 80 | zq -z 'type port=uint16 cast(this, <port>)' -
@@ -430,7 +430,7 @@ produces
 ```
 
 One or more type statements may appear at the beginning of a scope
-(i.e., the main scope at the start of a Zed program or a [lateral scope](#lateral-scope)
+(i.e., the main scope at the start of a Zed program or a [lateral scope](#81-lateral-scope)
 defined by an [over operator](operators/over.md#operator))
 and binds the identifier to the type in the scope in which it appears in addition
 to any contained scopes.
@@ -449,7 +449,7 @@ The syntax of individual literal values generally follows
 the [ZSON syntax](../formats/zson.md) with the exception that
 [type decorators](../formats/zson.md#22-type-decorators)
 are not included in the language.  Instead, a
-[type cast](#casts) may be used in any expression for explicit
+[type cast](#614-casts) may be used in any expression for explicit
 type conversion.
 
 In particular, the syntax of primitive types follows the
@@ -457,7 +457,7 @@ In particular, the syntax of primitive types follows the
 as well as the various [complex value definitions](../formats/zson.md#24-complex-values)
 like records, arrays, sets, and so forth.  However, complex values are not limited to
 constant values like ZSON and can be composed from literal expressions as
-[defined below](#expressions).
+[defined below](#611-literals).
 
 ### 5.1 First-class Types
 
@@ -874,7 +874,7 @@ in other languages and have the form
 <value> . <id>
 ```
 where `<id>` is an identifier representing the field name referenced.
-If a field name is not representable as an identifier, then [indexing](#indexing)
+If a field name is not representable as an identifier, then [indexing](#66-indexing)
 may be used with a quoted string to represent any valid field name.
 Such field names can be accessed using `this` and an array-style
 reference, e.g., `this["field with spaces"]`.
@@ -952,7 +952,7 @@ If the result is true, then the first `<expr>` expression is evaluated and becom
 the result.  Otherwise, the second `<expr>` expression is evaluated.
 
 Note that if the expression has side effects,
-as with [aggregation calls](#aggregation-calls), only the selected expression
+as with [aggregate function calls](#610-aggregate-function-calls), only the selected expression
 will be evaluated.
 
 For example,
@@ -1017,7 +1017,7 @@ produces just one output value
 
 ### 6.11 Literals
 
-Any of the [data types listed above](#data-types) may be used in expressions
+Any of the [data types listed above](#5-data-types) may be used in expressions
 as long as it is compatible with the semantics of the expression.
 
 String literals are enclosed in either single quotes or double quotes and
@@ -1193,7 +1193,7 @@ to determine the constant value assigned to the identifier `<id>`.
 This expression may not refer to `this` or any implied fields of `this`.
 
 Constants must appear at the beginning
-of a query or the beginning of a [parenthesized scope](#scopes).
+of a query or the beginning of a [parenthesized scope](#81-lateral-scope).
 
 ```mdtest-command
 echo '{diameter:1}{diameter:5}' | zq -z 'const PI = 3.14159 circumference:=2*PI*diameter' -
@@ -1223,7 +1223,7 @@ overridden by the input data; however, type values that refer to the named
 type may be redefined.
 
 Type definitions must appear at the beginning
-of a query or the beginning of a [parenthesized scope](#scopes).
+of a query or the beginning of a [parenthesized scope](#81-lateral-scope).
 
 ```mdtest-command
 echo '{s:1}{s:10.0.0.1}' | zq -z 'type foo = {s:string} cast(this, foo)' -
@@ -1573,7 +1573,7 @@ the "in" operator, e.g.,
 ##### 7.2.1.6 Predicate Search Term
 
 Any Boolean-valued [function](functions/README.md) like `is()`, `has()`,
-`grep()` etc. and any [comparison expression](#comparisons)
+`grep()` etc. and any [comparison expression](#62-comparisons)
 may be used as a search term and mixed into a search expression.
 
 For example,
