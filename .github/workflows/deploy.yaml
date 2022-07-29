@@ -40,3 +40,8 @@ jobs:
           curl -X POST -H "Content-Type: application/json" \
                --user "${{ secrets.ALGOLIA_CRAWLER_APP_ID }}:${{ secrets.ALGOLIA_CRAWLER_API_KEY }}" \
                "https://crawler.algolia.com/api/1/crawlers/${{ secrets.ALGOLIA_CRAWLER_ID }}/reindex"
+      - name: Check for broken links
+        uses: ruzickap/action-my-broken-link-checker@v2
+        with:
+          url: https://zed.brimdata.io
+          cmd_params: --buffer-size=8192 --header="Accept-Encoding:zstd,br,gzip,deflate" --exclude algolia.net --exclude www.googletagmanager.com
