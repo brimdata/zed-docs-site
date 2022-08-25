@@ -3,7 +3,9 @@ name: Deploy to Netlify
 on:
   push:
     branches:
-      - netlify-deploy
+      - main
+  repository_dispatch:
+    types: [zed-docs-update]
   workflow_dispatch:
 
 jobs:
@@ -35,7 +37,7 @@ jobs:
       - name: Check for broken links
         uses: ruzickap/action-my-broken-link-checker@v2
         with:
-          url: https://testzed.brimdata.io
+          url: https://zed.brimdata.io
           cmd_params:
             --verbose
             --buffer-size=8192

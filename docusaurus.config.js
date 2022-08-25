@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Zed",
   tagline: "Data has never been easier.",
-  url: "https://testzed.brimdata.io",
+  url: "https://zed.brimdata.io",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
