@@ -35,5 +35,15 @@ jobs:
       - name: Check for broken links
         uses: ruzickap/action-my-broken-link-checker@v2
         with:
-          url: https://spiffy-gnome-8f2834.netlify.app/
-          cmd_params: --verbose --buffer-size=8192 --header="Accept-Encoding:zstd,br,gzip,deflate" --exclude algolia.net --exclude www.googletagmanager.com
+          url: https://stellar-lebkuchen-6a326d.netlify.app
+          cmd_params:
+            --verbose
+            --buffer-size=8192
+            --header="Accept-Encoding:zstd,br,gzip,deflate"
+            --exclude algolia.net
+            --exclude www.googletagmanager.com
+      - name: Trigger Algolia Crawler
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+               --user "${{ secrets.ALGOLIA_CRAWLER_APP_ID }}:${{ secrets.ALGOLIA_CRAWLER_API_KEY }}" \
+               "https://crawler.algolia.com/api/1/crawlers/${{ secrets.ALGOLIA_CRAWLER_ID }}/reindex"
