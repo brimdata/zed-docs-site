@@ -35,7 +35,7 @@ jobs:
       - name: Check for broken links
         uses: ruzickap/action-my-broken-link-checker@v2
         with:
-          url: https://stellar-lebkuchen-6a326d.netlify.app
+          url: https://testzed.brimdata.io
           cmd_params:
             --verbose
             --buffer-size=8192
