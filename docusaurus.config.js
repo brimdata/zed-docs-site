@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Zed",
   tagline: "Data has never been easier.",
-  url: "https://zed.brimdata.io",
+  url: "https://stellar-lebkuchen-6a326d.netlify.app",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -16,7 +16,7 @@ const config = {
   stylesheets: ["https://use.typekit.net/nll6rzm.css"],
   organizationName: "brimdata",
   projectName: "zed",
-  trailingSlash: true,
+  trailingSlash: false,
 
   plugins: [
     // This plugin allows, e.g, docs/ to be a symlink to ../zed/docs/.
