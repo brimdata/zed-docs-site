@@ -1,4 +1,5 @@
 REF = main
+LATEST := $(shell python3 -c 'import json; versions = json.load(open("versions.json")); versions.sort(); print(versions[-1])')
 
 .PHONY: fetch
 fetch:
@@ -12,6 +13,8 @@ fetch:
 build: fetch
 	@yarn install --frozen-lockfile
 	@yarn build
+	@echo "/docs/$(LATEST)/*	/docs/:splat" > build/_redirects
+
 .PHONY: version
 version: fetch
 	yarn run docusaurus docs:version $(REF)
