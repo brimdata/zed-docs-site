@@ -1,5 +1,5 @@
 REF = main
-LATEST := $(shell python3 -c 'import json; versions = json.load(open("versions.json")); versions.sort(); print(versions[-1])')
+LATEST = $(shell jq -r '.[0]' versions.json)
 
 .PHONY: fetch
 fetch:
