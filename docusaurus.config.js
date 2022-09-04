@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Zed",
   tagline: "Data has never been easier.",
-  url: "https://zed.brimdata.io",
+  url: "https://jocular-choux-3cf6d8.netlify.app/",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -28,6 +28,16 @@ const config = {
         },
       };
     },
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'zui',
+        path: 'zui',
+        routeBasePath: 'zui',
+        sidebarPath: require.resolve('./sidebarsZui.js'),
+        // ... other options
+      },
+    ],
   ],
   presets: [
     [

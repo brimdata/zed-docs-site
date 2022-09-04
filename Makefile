@@ -8,12 +8,15 @@ fetch:
 	@git clone --depth=1 -b $(REF) --single-branch https://github.com/brimdata/zed tmp
 	@mv tmp/docs docs
 	@rm -rf tmp
+	@git clone --depth=1 -b zuifi-wiki --single-branch https://github.com/brimdata/brim tmpzui
+	@mv tmpzui/docs zui
+	@rm -rf tmpzui
 
 .PHONY: build
 build: fetch
 	@yarn install --frozen-lockfile
 	@yarn build
-	@echo "/docs/$(LATEST)/*	/docs/:splat" > build/_redirects
+	@echo "/docs/$(LATEST)/*        /docs/:splat" > build/_redirects
 
 .PHONY: version
 version: fetch
