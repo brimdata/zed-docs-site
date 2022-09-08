@@ -45,7 +45,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve("./sidebarsZed.js"),
           editUrl: ({docPath}) =>
             `https://github.com/brimdata/zed/edit/main/docs/${docPath}`,
           exclude: ["**/ztests/**"],
