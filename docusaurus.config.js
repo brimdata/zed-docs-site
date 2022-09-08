@@ -87,6 +87,11 @@ const config = {
             position: "right",
           },
           {
+            type: "docsVersionDropdown",
+            position: "left",
+            docsPluginId: "zui",
+          },
+          {
             href: "https://github.com/brimdata",
             label: "GitHub",
             position: "right",
