@@ -43,8 +43,8 @@ jobs:
             --buffer-size=8192
             --header="Accept-Encoding:zstd,br,gzip,deflate"
             --exclude algolia.net
-            --exclude www.googletagmanager.com
             --exclude github.com\/brimdata\/.*\/edit\/
+            --exclude www.googletagmanager.com
       - name: Trigger Algolia Crawler
         run: |
           curl -X POST -H "Content-Type: application/json" --fail-with-body \
