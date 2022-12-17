@@ -41,6 +41,7 @@ jobs:
           cmd_params:
             --verbose
             --buffer-size=8192
+            --header="User-Agent:Mozilla/5.0"
             --header="Accept-Encoding:zstd,br,gzip,deflate"
             --exclude algolia.net
             --exclude github.com\/brimdata\/.*\/edit\/
