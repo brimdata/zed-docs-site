@@ -69,7 +69,6 @@ const config = {
           src: "img/zed-logo.svg",
         },
         items: [
-          
           {
             type: "doc",
             docId: "README",
@@ -79,7 +78,12 @@ const config = {
           {
             type: "html",
             position: "right",
-            value: `<div class="github-button-wrap"><a class="github-button" href="https://github.com/brimdata/zed" data-size="large" data-show-count="true" aria-label="Star brimdata/zed on GitHub">Star</a></div>`
+            value: `<div class="github-button-wrap"><iframe
+                  src="https://ghbtns.com/github-btn.html?user=brimdata&amp;repo=zed&amp;type=star&amp;count=true&amp;size=medium"
+                  width="92"
+                  height="20"
+                  title="GitHub Stars"
+                /></div>`
           },
           {
             type: "docsVersionDropdown",
