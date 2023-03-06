@@ -53,6 +53,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        disableSwitch: true
+      },
       image: "img/zed-social-image.jpg",
       metadata: [
         { name: "twitter:card", content: "summary" },
@@ -66,6 +69,7 @@ const config = {
           src: "img/zed-logo.svg",
         },
         items: [
+          
           {
             type: "doc",
             docId: "README",
@@ -73,12 +77,12 @@ const config = {
             label: "Docs",
           },
           {
-            type: "docsVersionDropdown",
+            type: "html",
             position: "right",
+            value: `<div class="github-button-wrap"><a class="github-button" href="https://github.com/brimdata/zed" data-size="large" data-show-count="true" aria-label="Star brimdata/zed on GitHub">Star</a></div>`
           },
           {
-            href: "https://github.com/brimdata",
-            label: "GitHub",
+            type: "docsVersionDropdown",
             position: "right",
           },
         ],
