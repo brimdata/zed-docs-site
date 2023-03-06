@@ -53,6 +53,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        disableSwitch: true
+      },
       image: "img/zed-social-image.jpg",
       metadata: [
         { name: "twitter:card", content: "summary" },
@@ -73,12 +76,17 @@ const config = {
             label: "Docs",
           },
           {
-            type: "docsVersionDropdown",
+            type: "html",
             position: "right",
+            value: `<div class="github-button-wrap"><iframe
+                  src="https://ghbtns.com/github-btn.html?user=brimdata&amp;repo=zed&amp;type=star&amp;count=true&amp;size=medium"
+                  width="92"
+                  height="20"
+                  title="GitHub Stars"
+                /></div>`
           },
           {
-            href: "https://github.com/brimdata",
-            label: "GitHub",
+            type: "docsVersionDropdown",
             position: "right",
           },
         ],

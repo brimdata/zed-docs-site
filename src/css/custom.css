@@ -13,11 +13,12 @@
   
   --ifm-color-primary: var(--orange);
   --ifm-font-family-base: "protipo", "sans-serif";
-  --imf-font-color-base: var(--black)
+  --ifm-font-color-base: var(--black)
   --ifm-color-content: var(--black);
   --ifm-hero-text-color: var(--black);
   --ifm-heading-font-weight: 900;
   --ifm-color-primary-darkest: #702D00;
+  --ifm-menu-color: --black;
 
   --ifm-color-primary: #eb7500;
   --ifm-color-primary-dark: #d36900;
@@ -27,7 +28,13 @@
   --ifm-color-primary-lighter: #ff870f;
   --ifm-color-primary-lightest: #ff9832;
 
-  --ifm-font-size-base: 110%;
+  --ifm-font-size-base: 100%;
+
+  --ifm-breadcrumb-border-radius: 0;
+  --ifm-badge-border-radius: 0;
+  --ifm-global-radius: 0;
+  --ifm-navbar-padding-vertical: 0;
+  --ifm-navbar-height: min-content;
 }
 
 @media screen and (max-width: 996px) {
@@ -56,4 +63,75 @@
 
 .markdown a {
   font-weight: 500;
+}
+
+.menu {
+  font-weight: 400;
+}
+
+.menu__link, .menu__caret {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 0;
+  transition: none;
+}
+
+.menu__list-item-collapsible {
+  border-radius: 0;
+  transition: none;
+}
+
+.menu__link--active {
+  font-weight: bold;
+}
+
+.menu__caret::before,
+.menu__link--sublist-caret:after {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1rem 1rem;
+}
+
+.github-button-wrap {
+  display: flex;
+}
+
+.navbar__item {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.navbar__title {
+  font-size: 1.66rem;
+  font-weight: 900;
+}
+
+.navbar__items .DocSearch.DocSearch-Button {
+  height: 30px;
+  color: var(--ifm-font-color-base);
+  font-family: var(--ifm-font-family-base);
+  font-weight: 400;
+  border: 1px solid var(--ifm-color-secondary-darker);
+  border-radius: 0;
+  background: none;
+}
+
+.navbar__items .DocSearch.DocSearch-Button:hover {
+  color: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+}
+.navbar__items .DocSearch.DocSearch-Button:hover svg {
+color: var(--ifm-color-primary);
+}
+
+.navbar__items .DocSearch-Button svg {
+  width: 16px;
+  height: 16px;
+  color: var(--ifm-color-secondary-darker);
+}
+
+.navbar__items .DocSearch-Button-Keys {
+  display: none;
+}
+
+.navbar__items .DocSearch-Button-Placeholder {
+  padding: 0 4rem 0 6px;
 }
