@@ -33,7 +33,8 @@
 }
 
 .heroTitle {
-  font-size: 7rem;
+  font-size: 100px;
+  letter-spacing: 5px;
   margin-bottom: 0;
 }
 
