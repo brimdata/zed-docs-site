@@ -77,6 +77,11 @@ const config = {
             position: "right",
           },
           {
+            href: "https://zui.brimdata.io/docs",
+            label: "Zui Docs",
+            position: "right",
+          },
+          {
             href: "https://github.com/brimdata",
             label: "GitHub",
             position: "right",
