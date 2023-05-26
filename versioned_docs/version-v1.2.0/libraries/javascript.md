@@ -1,10 +1,10 @@
 # Javascript
 
-The [Zealot library](https://github.com/brimdata/brim/tree/main/packages/zealot)
+The [zed-js library](https://github.com/brimdata/zealot/tree/main/packages/zed-js)
 provides support for the Zed data model from within
 Javascript as well as methods for communicating with a Zed lake.
 
-Because Javascript's native type system is limtied, Zealot provides
+Because JavaScript's native type system is limtied, zed-js provides
 implementations for each of Zed's primitive types as well as
 technique for interpreting and/or constructing arbitrary complex types.
 
