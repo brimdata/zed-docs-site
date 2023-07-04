@@ -584,7 +584,7 @@ Next, a JSON file can be converted from ZNG using:
 zq -f json conn.zng > conn.json
 ```
 Note here that we lose information in this conversion because the rich data types
-of Zed (that were [translated from the Zeek format](https://github.com/brimdata/zed/blob/main/zeek/Data-Type-Compatibility.md)) are lost.
+of Zed (that were [translated from the Zeek format](https://github.com/brimdata/zed/blob/v1.8.0/zeek/Data-Type-Compatibility.md)) are lost.
 
 We'll also make a SQLite database in the file `conn.db` as the table named `conn`.
 One easy way to do this is to install
