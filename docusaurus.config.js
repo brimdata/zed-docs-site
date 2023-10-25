@@ -17,6 +17,13 @@ const config = {
   organizationName: "brimdata",
   projectName: "zed",
   trailingSlash: false,
+  scripts: [
+    {
+      src: 'https://plausible.io/js/script.js',
+      defer: true,
+      "data-domain": "zed.brimdata.io",
+    },
+  ],
 
   plugins: [
     // This plugin allows, e.g, docs/ to be a symlink to ../zed/docs/.
