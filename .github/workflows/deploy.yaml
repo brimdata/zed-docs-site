@@ -45,6 +45,7 @@ jobs:
             --header="User-Agent:Mozilla/5.0"
             --exclude algolia.net
             --exclude github.com\/brimdata\/.*\/edit\/
+            --exclude twitter.com
             --exclude www.googletagmanager.com
       - name: Trigger Algolia Crawler
         run: |
