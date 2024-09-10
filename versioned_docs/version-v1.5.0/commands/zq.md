@@ -36,7 +36,7 @@ simply run `zq` with no arguments.
 
 `zq` supports a [number of formats](#2-input-formats) but [ZNG](../formats/zng.md)
 tends to be the most space-efficient and most performant.  ZNG has efficiency similar to
-[Avro](https://avro.apache.org/docs/current/spec.html)
+[Avro](https://avro.apache.org)
 and [Protocol Buffers](https://developers.google.com/protocol-buffers)
 but its comprehensive [Zed type system](../formats/zed.md) obviates
 the need for schema specification or registries.
