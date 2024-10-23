@@ -5,7 +5,7 @@ LATEST = $(shell jq -r '.[0]' versions.json)
 fetch:
 	@rm -rf docs tmp
 	@mkdir tmp
-	@git clone --depth=1 -b $(REF) --single-branch https://github.com/brimdata/zed tmp
+	@git clone --depth=1 -b $(REF) --single-branch https://github.com/brimdata/super tmp
 	@mv tmp/docs docs
 	@rm -rf tmp
 
@@ -22,5 +22,5 @@ version: fetch
 .PHONY: dev
 dev:
 	@rm -rf docs
-	@ln -s ../zed/docs
+	@ln -s ../super/docs
 	@yarn start
