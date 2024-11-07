@@ -16,9 +16,9 @@ If you want to follow along by running the examples, simply
 [install zq](../install.md) and copy the
 data files used here into your working directory:
 ```
-curl https://raw.githubusercontent.com/brimdata/zed/main/testdata/edu/schools.zson > schools.zson
-curl https://raw.githubusercontent.com/brimdata/zed/main/testdata/edu/testscores.zson > testscores.zson
-curl https://raw.githubusercontent.com/brimdata/zed/main/testdata/edu/webaddrs.zson > webaddrs.zson
+curl https://raw.githubusercontent.com/brimdata/zed/v1.18.0/testdata/edu/schools.zson > schools.zson
+curl https://raw.githubusercontent.com/brimdata/zed/v1.18.0/testdata/edu/testscores.zson > testscores.zson
+curl https://raw.githubusercontent.com/brimdata/zed/v1.18.0/testdata/edu/webaddrs.zson > webaddrs.zson
 ```
 These files are all encoded in the human-readable [ZSON format](../formats/zson.md)
 so you can easily have a look at them.  ZSON is not optimized for speed but these
