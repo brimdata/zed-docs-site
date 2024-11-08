@@ -7,7 +7,7 @@ sidebar_label: Schools Data
 
 > This document provides a beginner's overview of the Zed language
 using the [zq command](../commands/zq.md) and
-[real-world data](https://github.com/brimdata/zed/blob/main/testdata/edu/README.md) relating to California schools
+[real-world data](https://github.com/brimdata/zed/blob/v1.18.0/testdata/edu/README.md) relating to California schools
 and test scores.
 
 ## 1. Getting Started
