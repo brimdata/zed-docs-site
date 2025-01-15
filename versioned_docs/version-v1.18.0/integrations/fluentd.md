@@ -369,7 +369,7 @@ storage that contain the granular commits that have already been rolled into
 larger objects by compaction.
 
 :::tip Note
-As described in issue [zed/4934](https://github.com/brimdata/zed/issues/4934),
+As described in issue [zed/4934](https://github.com/brimdata/super/issues/4934),
 even after running `zed vacuum`, some files related to commit history are
 currently still left behind below the lake storage path. The issue describes
 manual steps that can be taken to remove these files safely, if desired.
@@ -410,4 +410,4 @@ article can be improved.
 If you're having difficulty, interested in loading or shaping other data
 sources, or just have feedback, please join our
 [public Slack](https://www.brimdata.io/join-slack/) and speak up or
-[open an issue](https://github.com/brimdata/zed/issues/new/choose). Thanks!
+[open an issue](https://github.com/brimdata/super/issues/new/choose). Thanks!
