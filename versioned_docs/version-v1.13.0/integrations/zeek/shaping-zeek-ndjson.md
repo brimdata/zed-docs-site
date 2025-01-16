@@ -308,8 +308,8 @@ steps:
       ... | put this := shape(schemas[_path]) | put this := crop(schemas[_path])
       ```
 
-   Open issues [zed/2585](https://github.com/brimdata/zed/issues/2585) and
-   [zed/2776](https://github.com/brimdata/zed/issues/2776) both track planned
+   Open issues [zed/2585](https://github.com/brimdata/super/issues/2585) and
+   [zed/2776](https://github.com/brimdata/super/issues/2776) both track planned
    future improvements to this part of Zed shapers.
 
 ## Invoking the Shaper From `zq`
@@ -383,13 +383,13 @@ originating IP address:
 zq -I shaper.zed -f table '| count() by network_of(id.orig_h) | sort -r' conn.log
 ```
 
-[zed/2584](https://github.com/brimdata/zed/issues/2584) tracks a planned
+[zed/2584](https://github.com/brimdata/super/issues/2584) tracks a planned
 improvement for this use of `zq -I`.
 
 If you intend to frequently shape the same NDJSON data, you may want to create
 an alias in your
 shell to always invoke `zq` with the necessary `-I` flag pointing to the path
-of your finalized shaper. [zed/1059](https://github.com/brimdata/zed/issues/1059)
+of your finalized shaper. [zed/1059](https://github.com/brimdata/super/issues/1059)
 tracks a planned enhancement to persist such settings within Zed itself rather
 than relying on external mechanisms such as shell aliases.
 
@@ -398,7 +398,7 @@ than relying on external mechanisms such as shell aliases.
 If you wish to browse your shaped data with [Zui](https://zui.brimdata.io/),
 the best way to accomplish this at the moment would be to use `zq` to convert
 it to ZNG [as shown above](#invoking-the-shaper-from-zq), then drag the ZNG
-into Zui as you would any other log. An enhancement [zed/2695](https://github.com/brimdata/zed/issues/2695)
+into Zui as you would any other log. An enhancement [zed/2695](https://github.com/brimdata/super/issues/2695)
 is planned that will soon make it possible to attach your shaper to a
 Pool. This will allow you to drag the original NDJSON logs directly into the
 Pool in Zui and have the shaping applied as the records are being committed to
@@ -408,5 +408,5 @@ the Pool.
 
 If you're having difficulty, interested in shaping other data sources, or
 just have feedback, please join our [public Slack](https://www.brimdata.io/join-slack/)
-and speak up or [open an issue](https://github.com/brimdata/zed/issues/new/choose).
+and speak up or [open an issue](https://github.com/brimdata/super/issues/new/choose).
 Thanks!
