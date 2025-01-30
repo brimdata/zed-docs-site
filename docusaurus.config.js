@@ -42,6 +42,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          includeCurrentVersion: false,
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({docPath}) =>
             `https://github.com/brimdata/zed/edit/main/docs/${docPath}`,
@@ -57,6 +58,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'superdb_announce',
+        content:
+          'Zed is currently evolving into <a href="https://superdb.org/">SuperDB</a>. While still under construction, early <a href="https://superdb.org/docs/">SuperDB docs</a> are available.',
+        backgroundColor: '#F9DA46',
+        textColor: '#000',
+        isCloseable: false,
+      },
       image: "img/zed-social-image.jpg",
       metadata: [
         { name: "twitter:card", content: "summary" },
