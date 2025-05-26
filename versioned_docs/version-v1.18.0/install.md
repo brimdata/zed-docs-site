@@ -31,7 +31,7 @@ Once installed, run a [quick test](#quick-tests).
 ## Binary Download
 
 We offer pre-built binaries for macOS, Windows and Linux for both x86 and arm
-architectures in the Zed [Github Release page](https://github.com/brimdata/zed/releases).
+architectures in the Zed [Github Release page](https://github.com/brimdata/zed-archive/releases).
 
 Each archive includes the build for `zq` and `zed`.
 

@@ -59,7 +59,7 @@ After making these changes, Zeek was started by running
 
 ### Zed
 
-A binary [release package](https://github.com/brimdata/zed/releases) of Zed
+A binary [release package](https://github.com/brimdata/zed-archive/releases) of Zed
 executables compatible with our instance was downloaded and unpacked to a
 directory in our `$PATH`, then the [lake service](https://zed.brimdata.io/docs/commands/zed#serve)
 was started with a specified storage path.
