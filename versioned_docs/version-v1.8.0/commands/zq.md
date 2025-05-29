@@ -547,7 +547,7 @@ is not particularly performant.  To this end, `zq` has its own lean and simple
 [JSON tokenizer](https://pkg.go.dev/github.com/brimdata/zed/pkg/jsonlexer),
 which performs quite well,
 and is
-[integrated tightly](https://github.com/brimdata/zed/blob/main/zio/jsonio/reader.go)
+[integrated tightly](https://github.com/brimdata/zed-archive/blob/main/zio/jsonio/reader.go)
 with Zed's internal data representation.
 Moreover, like `jq`,
 `zq`'s JSON parser does not require objects to be newline delimited and can
@@ -584,7 +584,7 @@ Next, a JSON file can be converted from ZNG using:
 zq -f json conn.zng > conn.json
 ```
 Note here that we lose information in this conversion because the rich data types
-of Zed (that were [translated from the Zeek format](https://github.com/brimdata/zed/blob/v1.8.0/zeek/Data-Type-Compatibility.md)) are lost.
+of Zed (that were [translated from the Zeek format](https://github.com/brimdata/zed-archive/blob/v1.8.0/zeek/Data-Type-Compatibility.md)) are lost.
 
 We'll also make a SQLite database in the file `conn.db` as the table named `conn`.
 One easy way to do this is to install
