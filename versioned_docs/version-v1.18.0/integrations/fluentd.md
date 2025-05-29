@@ -24,7 +24,7 @@ Linux 24.04. At the time this article was written, the following versions
 were used for the referenced software:
 
 * [Fluentd v1.17.0](https://github.com/fluent/fluentd/releases/tag/v1.17.0)
-* [Zed v1.17.0](https://github.com/brimdata/zed/releases/tag/v1.17.0)
+* [Zed v1.17.0](https://github.com/brimdata/zed-archive/releases/tag/v1.17.0)
 * [Zeek v6.2.1](https://github.com/zeek/zeek/releases/tag/v6.2.1)
 
 ### Zeek
